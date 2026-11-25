@@ -52,7 +52,6 @@ def build_chain():
 def ask(question, retriever, chain):
     docs = retriever.invoke(question)
 
-    answer = answer.replace("[", "").replace("]", "")
 
     context = ""
     for doc in docs:
@@ -63,6 +62,8 @@ def ask(question, retriever, chain):
         "context": context,
         "question": question,
     })
+    answer = answer.replace("[", "").replace("]", "")
+
 
     sources = []
     if not answer.strip().startswith(NO_ANSWER):
