@@ -14,7 +14,7 @@ COLLECTION_NAME = "portfolio"
 
 CHUNK_SIZE = 500
 CHUNK_OVERLAP = 80
-TOP_K = 4
+TOP_K = 6
 
 
 def get_embeddings():
