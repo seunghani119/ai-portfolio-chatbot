@@ -52,6 +52,8 @@ def build_chain():
 def ask(question, retriever, chain):
     docs = retriever.invoke(question)
 
+    answer = answer.replace("[", "").replace("]", "")
+
     context = ""
     for doc in docs:
         context += doc.page_content + "\n\n"
